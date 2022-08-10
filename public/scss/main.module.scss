@@ -1,0 +1,84 @@
+@import '_fontColor.scss';
+
+.Wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  .MainWrap {
+    display: table;
+    margin: auto;
+    img {
+      margin-top: 15%;
+      filter: brightness(0) invert(1);
+    }
+    .MainDefine {
+      color: purple;
+      opacity: 0.8;
+    }
+    .MainDebug {
+      color: white;
+    }
+    .NameDebug {
+      position: relative;
+      font-family: $Noto-Serif;
+      font-size: 3em;
+      justify-content: center;
+      color: $pantone;
+      .MainImage {
+        margin-top: 15%;
+        vertical-align: middle;
+      }
+    }
+    .line {
+      border-right: 2px solid;
+      position: relative;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    .typing {
+      animation: typewriter 2s steps(16) 2s 1 normal both, blinkCursor 0.6s steps(6) infinite normal;
+    }
+    .MainButtonWrap {
+      width: 100%;
+      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      .MainMotion {
+        display: inline-table;
+        margin-top: 20%;
+        .MainButton {
+          width: 5em;
+          height: 5em;
+          color: $white;
+          background-color: rgba(37, 42, 52, 0.5);
+          border-style: none;
+          a {
+            color: white;
+            :active {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blinkCursor {
+  from {
+    border-right-color: rgba(37, 42, 52, 0.3);
+  }
+  to {
+    border-right-color: rgba(255, 255, 255, 1);
+  }
+}

@@ -1,0 +1,78 @@
+@import '_fontColor.scss';
+
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+}
+
+#__next {
+  height: 100vh;
+}
+
+.FooterBody {
+  position: fixed;
+  bottom: 0px;
+  font-family: $Noto-Serif;
+  font-size: 0.3em;
+  background-color: $black;
+  width: 100%;
+  height: 2rem;
+  color: $white;
+  text-align: center;
+}
+
+.MainBody {
+  width: 100%;
+  height: 93.5vh;
+}
+
+.HeaderBody {
+  top: 0px;
+  display: flex;
+  justify-content: space-between;
+  font-family: $Noto-Serif;
+  font-size: 0.5em;
+  background-color: $black;
+  width: 100%;
+  height: 2rem;
+  color: $white;
+  .LogoImg {
+    width: 2rem;
+  }
+  .MainBtn {
+  }
+  .RecruitBtn {
+  }
+}
+
+.Backgroud {
+  position: fixed;
+  background-image: url('../images/Background.jpg');
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  bottom: 0px;
+}
+
+@mixin max-screen($media-model) {
+  //max-screen 이하일 경우
+  @media screen and (max-width: $media-model) {
+    @content;
+  }
+}
+
+@mixin min-screen($media-model) {
+  //max-screen 이상일 경우
+  @media screen and (min-width: $media-model) {
+    @content;
+  }
+}
+
+@mixin screen($media-model-min, $media-model-max) {
+  // min 이상, max 이하
+  @media screen and (min-width: $media-model-min) and (max-width: $media-model-max) {
+    @content;
+  }
+}

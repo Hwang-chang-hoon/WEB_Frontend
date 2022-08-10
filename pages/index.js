@@ -1,10 +1,7 @@
 import React from 'react';
+import Main from '../components/Main';
 
 const Index = () => {
-  return (
-    <>
-      <div className="asdf">인덱스</div>
-    </>
-  );
+  return <Main />;
 };
 export default Index;

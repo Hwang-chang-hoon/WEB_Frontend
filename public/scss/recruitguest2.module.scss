@@ -1,0 +1,19 @@
+.Wrap {
+  height: 100%;
+  width: 100%;
+  color: white;
+  overflow: auto;
+  .recruitName {
+    margin-top: 5rem;
+    text-align: center;
+  }
+  .AnswerWrap {
+    margin: 3em;
+  }
+  .RecruitAnswerSubmitWrap {
+    text-align: center;
+    .RecruitAnswerSubmit {
+      color: white;
+    }
+  }
+}
