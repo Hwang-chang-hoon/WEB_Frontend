@@ -49,6 +49,6 @@
   "author": "",
   "license": "ISC",
   "lint-staged": {
-    "*.{js,css,md}": "prettier --write"
+    "*.{js,scss,md}": "prettier --write"
   }
 }

@@ -1,17 +1,1 @@
-@import url(https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;700&display=swap);
-.Wrap {
-  margin: auto;
-  max-width: 60%;
-  min-width: 50%;
-}
-.Wrap .AnswerField {
-  border: 0;
-  margin-bottom: 2em;
-}
-.Wrap .questionname {
-  color: #fff;
-}
-.Wrap .textfield {
-  border-radius: 0.8em;
-  background: #fff;
-}
+@import url(https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;700&display=swap);@import url(https://fonts.googleapis.com/css2?family=Song+Myung&display=swap);@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);.Wrap{margin:auto;max-width:60%;min-width:50%}.Wrap .AnswerField{border:0;margin-bottom:2em}.Wrap .questionname{color:#fff}.Wrap .textfield{border-radius:.8em;background:#fff}

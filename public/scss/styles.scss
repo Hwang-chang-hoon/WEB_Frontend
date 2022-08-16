@@ -42,8 +42,22 @@ body {
     width: 2rem;
   }
   .MainBtn {
+    a {
+      text-decoration: none;
+      color: #2196f3;
+      :active {
+        color: #1769aa;
+      }
+    }
   }
   .RecruitBtn {
+    a {
+      text-decoration: none;
+      color: #2196f3;
+      :active {
+        color: #1769aa;
+      }
+    }
   }
 }
 
