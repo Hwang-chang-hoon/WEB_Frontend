@@ -3,10 +3,14 @@ import React, { Component } from 'react';
 const QuestionInfo = (props) => {
   QuestionInfo.defaultProps = {
     info: {
-      name: '이름',
-      phone: '010-0000-0000',
+      question: '질문',
       id: 0,
     },
+  };
+  const handleRemove = () => {
+    // 삭제 버튼이 클릭되면 onRemove 에 id 넣어서 호출
+    const { info, onRemove } = props;
+    onRemove(info.id);
   };
 
   const style = {
@@ -16,15 +20,15 @@ const QuestionInfo = (props) => {
     color: 'white',
   };
 
-  const { name, phone, id } = props.info;
+  const { question, id } = props.info;
 
   return (
     <div style={style}>
       <div>{id}</div>
       <div>
-        <b>{name}</b>
+        <b>{question}</b>
+        <button onClick={handleRemove}>삭제</button>
       </div>
-      <div>{phone}</div>
     </div>
   );
 };

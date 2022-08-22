@@ -4,19 +4,15 @@ import styles from '../public/css/questionStyle.module.css';
 
 const QuestionForm = (props) => {
   const [input, setInput] = useState({
-    name: '',
-    phone: '',
+    question: '',
   });
 
-  const { name, phone } = input;
+  const { question } = input;
 
   const handleChange = (e) => {
-    const { value, name } = e.target;
-    setInput({
-      ...input,
-      [name]: value,
-    });
+    setInput(e.target.value);
   };
+
   const handleSubmit = (e) => {
     // 페이지 리로딩 방지
     e.preventDefault();
@@ -24,14 +20,12 @@ const QuestionForm = (props) => {
     props.onCreate(input);
     // 상태 초기화
     setInput({
-      name: '',
-      phone: '',
+      question: '',
     });
   };
   return (
     <form onSubmit={handleSubmit}>
-      <textarea placeholder="이름" value={name} onChange={handleChange} name="name" />
-      // <textarea placeholder="전화번호" value={phone} onChange={handleChange} name="phone" />
+      <textarea placeholder="질문" value={question} onChange={handleChange} name="question" />
       <button type="submit">등록</button>
     </form>
   );

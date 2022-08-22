@@ -1,35 +1,57 @@
 //질문 작성 페이지
+import { Box, Button } from '@mui/material';
 import React, { Component } from 'react';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import QuestionForm from '../components/QuestionForm.js';
 import QuestionInfoList from '../components/QuestionInfoList';
-const RecruitQuestion = (props) => {
-  let id = 2;
-  const state = {
-    information: [
-      {
-        id: 0,
-        name: '김민준',
-        phone: '010-0000-0000',
-      },
-      {
-        id: 1,
-        name: '홍길동',
-        phone: '010-0000-0001',
-      },
-    ],
-  };
+import styles from '../public/css/questionStyle.module.css';
+import { defaultFadeInLeftVariants, defaultFadeInUpVariants } from './motion';
+import SendIcon from '@mui/icons-material/Send';
+import { motion } from 'framer-motion';
 
+const RecruitQuestion = (props) => {
+  const [input, setInput] = useState({
+    question: '',
+  });
+
+  const [question, setQuestion] = useState([
+    {
+      id: 0,
+      question: '질문 1',
+    },
+    {
+      id: 1,
+      question: '질문 2',
+    },
+  ]);
+
+  const nextId = useRef(2);
   const handleCreate = (data) => {
-    const { information } = state;
-    information.concat({ id: id++, ...data });
+    const user = {
+      id: nextId.current,
+      question: data,
+    };
+    setQuestion([...question, user]);
+
+    setInput({
+      question: '',
+    });
+    nextId.current += 1;
     console.log(data);
-    console.log(id);
+    console.log(question);
+  };
+  const handleRemove = (id) => {
+    setQuestion(question.filter((info) => info.id !== id));
   };
   return (
     <div>
       <QuestionForm onCreate={handleCreate} />
-      <QuestionInfoList data={state.information} />
+      <QuestionInfoList data={question} onRemove={handleRemove} />
+      <motion.div initial="initial" whileInView="animate" variants={defaultFadeInUpVariants} className={`${styles.RecruitAnswerSubmitWrap}`}>
+        <Button variant="text" size="large" className={`${styles.RecruitAnswerSubmit}`} endIcon={<SendIcon />}>
+          제출
+        </Button>
+      </motion.div>
     </div>
   );
 };
