@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import QuestionInfo from './QuestionInfo.js';
+import styles from '../public/css/questionAdminList.module.css';
 
 const QuestionInfoList = (props) => {
   QuestionInfoList.defaultProps = {
@@ -8,7 +9,7 @@ const QuestionInfoList = (props) => {
   };
   const { data, onRemove } = props;
   return (
-    <div>
+    <div className={`${styles.Wrap}`}>
       {props.data.map((info) => (
         <QuestionInfo key={info.id} info={info} onRemove={onRemove} />
       ))}

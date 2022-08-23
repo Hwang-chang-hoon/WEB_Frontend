@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import { useState, useRef } from 'react';
 import QuestionForm from '../components/QuestionForm.js';
 import QuestionInfoList from '../components/QuestionInfoList';
-import styles from '../public/css/questionStyle.module.css';
+import styles from '../public/css/questionAdminStyle.module.css';
 import { defaultFadeInLeftVariants, defaultFadeInUpVariants } from './motion';
 import SendIcon from '@mui/icons-material/Send';
 import { motion } from 'framer-motion';

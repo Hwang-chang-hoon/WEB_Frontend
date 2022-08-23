@@ -24,7 +24,7 @@ const QuestionInfo = (props) => {
 
   return (
     <div style={style}>
-      <div>{id}</div>
+      <div>Q {id + 1}번 질문</div>
       <div>
         <b>{question}</b>
         <button onClick={handleRemove}>삭제</button>
