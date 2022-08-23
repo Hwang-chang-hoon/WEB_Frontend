@@ -44,7 +44,10 @@ const RecruitQuestion = (props) => {
     setQuestion(question.filter((info) => info.id !== id));
   };
   return (
-    <div>
+    <div className={`${styles.Wrap}`}>
+      <motion.h2 initial="initial" whileInView="animate" variants={defaultFadeInLeftVariants} className={`${styles.recruitName}`}>
+        {props.count}기 지원서
+      </motion.h2>
       <QuestionForm onCreate={handleCreate} />
       <QuestionInfoList data={question} onRemove={handleRemove} />
       <motion.div initial="initial" whileInView="animate" variants={defaultFadeInUpVariants} className={`${styles.RecruitAnswerSubmitWrap}`}>

@@ -1,18 +1,19 @@
-@import '_fontColor.scss';
-
 .Wrap {
-  margin: auto;
-  max-width: 60%;
-  min-width: 50%;
-  .AnswerField {
-    border: none;
-    margin-bottom: 2em;
+  height: 100%;
+  width: 100%;
+  color: white;
+  overflow: auto;
+  .recruitName {
+    margin-top: 5rem;
+    text-align: center;
   }
-  .questionname {
-    color: white;
+  .AnswerWrap {
+    margin: 3em;
   }
-  .textfield {
-    border-radius: 0.8em;
-    background: $white;
+  .RecruitAnswerSubmitWrap {
+    text-align: center;
+    .RecruitAnswerSubmit {
+      color: white;
+    }
   }
 }
