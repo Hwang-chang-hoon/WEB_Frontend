@@ -1,0 +1,54 @@
+@import '_fontColor.scss';
+
+.LoginWrap {
+  width: 100%;
+  height: 100%;
+  .LoginBoxWrap {
+    background-color: #ffffff;
+    border-radius: 2em;
+    box-shadow: 5px 5px 5px #323232;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 3%;
+    width: 55vh;
+    height: 55vh;
+    h2 {
+      font-family: $Noto-Serif;
+      color: #8bcb98;
+      letter-spacing: 0.4em;
+      font-weight: 800;
+      text-shadow: 2px 2px 5px #8fbc8f;
+    }
+    hr {
+      height: 0.1em;
+      background-color: #dcdcdc;
+      border: 0;
+      margin-top: 2em;
+      margin-bottom: 3em;
+    }
+    .TextFieldWrap {
+      padding-top: 0.3em;
+      .TextField {
+        margin: 2em;
+      }
+    }
+    .ButtonGroup {
+      margin-top: 5em;
+      button:nth-child(1) {
+        background-color: #8bcb98;
+        width: 10em;
+        margin-right: 1em;
+      }
+      button:nth-child(2) {
+        background-color: #8bcb98;
+        width: '10em';
+      }
+    }
+    .TextField {
+      width: '15em';
+    }
+  }
+}
