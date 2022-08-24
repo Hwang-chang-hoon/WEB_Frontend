@@ -1,0 +1,16 @@
+.Wrap {
+  width: 80vw;
+  height: 80vh;
+  color: white;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .title {
+    align-items: center;
+  }
+  .highlight {
+    color: blueviolet;
+  }
+}

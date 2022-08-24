@@ -66,11 +66,11 @@ const Join = () => {
           </Button>
         </div>
 
-        {isOverlapped === undefined && !overlapButtonClicked ? <div>id중복체크를 해주세요.</div> : isOverlapped === true ? <div>이미 존재하는 아이디입니다.</div> : ''}
+        {isOverlapped === undefined && !overlapButtonClicked ? <div className={styles.Explane}>id중복체크를 해주세요.</div> : isOverlapped === true ? <div className={styles.Explane}>이미 존재하는 아이디입니다.</div> : ''}
         <TextField required id="input-with-icon-textfield" className={styles.TextField} label="email" variant="standard" value={email} onChange={onChangeEmail} />
         <TextField required id="input-with-icon-textfield" className={styles.TextField} label="비밀번호" type="password" value={password} onChange={onChangePassword} variant="standard" />
         <TextField required id="input-with-icon-textfield" className={styles.TextField} label="비밀번호 확인" type="password" value={passwordCheck} onChange={onChangePasswordCheck} variant="standard" />
-        {passwordError && password !== '' ? <div>비밀번호와 비밀번호 확인이 다릅니다.</div> : ''}
+        {passwordError && password !== '' ? <div className={styles.Explane}>비밀번호와 비밀번호 확인이 다릅니다.</div> : ''}
         <Button variant="outlined" className={styles.ButtonWrap} disabled={passwordError && isOverlapped === undefined} onClick={onSubmit}>
           회원가입
         </Button>
