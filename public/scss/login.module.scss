@@ -33,10 +33,11 @@
       padding-top: 0.3em;
       .TextField {
         margin: 2em;
+        width: 38vw;
       }
     }
     .ButtonGroup {
-      margin-top: 5em;
+      margin-top: 3em;
       button:nth-child(1) {
         background-color: #8bcb98;
         width: 10em;
@@ -44,7 +45,7 @@
       }
       button:nth-child(2) {
         background-color: #8bcb98;
-        width: '10em';
+        width: 10em;
       }
     }
     .TextField {

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Button } from '@mui/material';
-import Link from 'next/link';
 
 const AppLayout = ({ children }) => {
   return (
@@ -15,7 +14,10 @@ const AppLayout = ({ children }) => {
               <a href="/">Main</a>
             </Button>
             <Button variant="text" size="small" className="RecruitBtn">
-              <a href="/recruit">Recruit</a>
+              <a href="/recruit/precruit">Recruit</a>
+            </Button>
+            <Button variant="text" size="small" className="RecruitBtn">
+              <a href="/auth/login">Login</a>
             </Button>
           </div>
         </div>
