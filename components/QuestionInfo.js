@@ -3,10 +3,11 @@ import React, { Component } from 'react';
 const QuestionInfo = (props) => {
   QuestionInfo.defaultProps = {
     info: {
-      question: '질문',
       id: 0,
+      question: '질문',
     },
   };
+
   const handleRemove = () => {
     // 삭제 버튼이 클릭되면 onRemove 에 id 넣어서 호출
     const { info, onRemove } = props;
@@ -24,7 +25,7 @@ const QuestionInfo = (props) => {
 
   return (
     <div style={style}>
-      <div>Q {id + 1}번 질문</div>
+      <div>{id}</div>
       <div>
         <b>{question}</b>
         <button onClick={handleRemove}>삭제</button>
