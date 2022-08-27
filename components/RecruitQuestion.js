@@ -48,17 +48,10 @@ const RecruitQuestion = (props) => {
     console.log(question);
   };
 
-  // const handleSubmit = (e) => {
-  //   // 페이지 리로딩 방지
-  //   e.preventDefault();
-  //   // 상태값을 onCreate 를 통하여 부모에게 전달
-  //   props.onCreate(question);
-  //   // 상태 초기화
-  //   setQuestion('');
-  // };
-
   const handleRemove = (id) => {
-    setQuestion(question.slice((id, 1)));
+    console.log(id);
+    const result = question.splice(id, 1);
+    setQuestion(question);
   };
 
   return (
@@ -76,7 +69,7 @@ const RecruitQuestion = (props) => {
       </div>
 
       <motion.div initial="initial" whileInView="animate" variants={defaultFadeInUpVariants} className={styles.RecruitAnswerSubmitWrap}>
-        <Button variant="text" size="large" className={`${styles.RecruitAnswerSubmit}`} endIcon={<SendIcon />}>
+        <Button variant="text" size="large" className={styles.RecruitAnswerSubmit} endIcon={<SendIcon />}>
           제출
         </Button>
       </motion.div>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styles from '../public/css/questionAdminInput.module.css';
 
 const QuestionInfo = (props) => {
   QuestionInfo.defaultProps = {
@@ -9,22 +10,16 @@ const QuestionInfo = (props) => {
   };
 
   const handleRemove = () => {
+    console.log(id);
     // 삭제 버튼이 클릭되면 onRemove 에 id 넣어서 호출
     const { info, onRemove } = props;
     onRemove(info.id);
   };
 
-  const style = {
-    border: '1px solid black',
-    padding: '8px',
-    margin: '8px',
-    color: 'white',
-  };
-
   const { question, id } = props.info;
 
   return (
-    <div style={style}>
+    <div className={styles.Wrap}>
       <div>{id}</div>
       <div>
         <b>{question}</b>
