@@ -1,0 +1,22 @@
+.Wrap {
+  margin: auto;
+  max-width: 60%;
+  min-width: 50%;
+
+  .Questionbox {
+    height: 5em;
+    color: black;
+    border-radius: 1em;
+    background-color: white;
+    margin-bottom: 1em;
+  }
+  .textBox {
+    margin: 1em;
+    width: 100%;
+  }
+
+  .deletbutton {
+    float: right;
+    bottom: 0em;
+  }
+}

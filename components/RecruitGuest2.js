@@ -26,7 +26,7 @@ const RecruitGuest2 = (props) => {
         </motion.div>
       </Box>
       <motion.div initial="initial" whileInView="animate" variants={defaultFadeInUpVariants} className={`${styles.RecruitAnswerSubmitWrap}`}>
-        <Button variant="text" size="large" className={`${styles.RecruitAnswerSubmit}`} endIcon={<SendIcon />}>
+        <Button variant="text" size="large" className={styles.RecruitAnswerSubmit} endIcon={<SendIcon />}>
           제출
         </Button>
       </motion.div>

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import styles from '../public/css/questionAdminInput.module.css';
+import styles from '../public/css/questionAdminList.module.css';
+import { Button } from '@mui/material';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 const QuestionInfo = (props) => {
   QuestionInfo.defaultProps = {
@@ -20,10 +22,11 @@ const QuestionInfo = (props) => {
 
   return (
     <div className={styles.Wrap}>
-      <div>{id}</div>
-      <div>
-        <b>{question}</b>
-        <button onClick={handleRemove}>삭제</button>
+      <div className={styles.Questionbox}>
+        <div className={styles.textBox}>{question}</div>
+        <Button variant="contained" color="secondary" startIcon={<DeleteIcon />} className={styles.deletbutton} onClick={handleRemove}>
+          삭제
+        </Button>
       </div>
     </div>
   );

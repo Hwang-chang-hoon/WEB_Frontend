@@ -25,7 +25,7 @@ const QuestionForm = (props) => {
   return (
     <div className={styles.Wrap}>
       <form onSubmit={handleSubmit}>
-        <fieldset className={styles.AnswerField}>
+        <fieldset className={`${styles.AnswerField}`}>
           <TextField id="filled-full-width" label={'질문을 등록해주세요.'} fullWidth variant="filled" className={styles.textfield} multiline maxRows={4} value={question} onChange={handleQuestion} name="question" />
           <motion.div initial="initial" whileInView="animate" variants={defaultFadeInUpVariants} className={styles.RecruitAnswerSubmitWrap}>
             <Button type="submit" variant="text" size="large" className={styles.RecruitAnswerSubmit} endIcon={<SendIcon />}>

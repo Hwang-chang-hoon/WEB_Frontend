@@ -50,8 +50,7 @@ const RecruitQuestion = (props) => {
 
   const handleRemove = (id) => {
     console.log(id);
-    const result = question.splice(id, 1);
-    setQuestion(question);
+    setQuestion(question.filter((info) => info.id !== id));
   };
 
   return (
